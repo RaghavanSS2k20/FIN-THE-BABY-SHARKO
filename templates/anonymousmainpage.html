@@ -1,0 +1,9 @@
+{%extends "mainpage.html"%}
+{%block user%}
+<h2>HOLA NEW USER</h2>
+{%endblock%}
+{%block login%}
+  <div class="heading">
+    <a href="{{ url_for('login') }}" class="mainpage-indexbutton">LOGIN</a>
+  </div>
+  {%endblock%}

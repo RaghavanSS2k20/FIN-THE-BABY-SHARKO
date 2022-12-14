@@ -1,0 +1,85 @@
+{%extends "index.html"%}
+{%block head%}
+<link href="http://allfont.net/allfont.css?fonts=agency-fb-bold" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&family=Montserrat:wght@900&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href= "{{ url_for('static',filename='stylesheets/mainpage.css') }}">
+<title>Fin searches for you</title>
+{%endblock%}
+
+ {%block body%}
+ {%block navigation%}
+ {{super()}}
+ {%endblock%}
+  {%block mainsection%}
+ {%block section%}
+ <div class="container">
+  <div class="heading">
+    {%block user%}
+    <h2>FIN SAYS A BIG HII FOR {{session['username']}}</h2>
+    
+    {%endblock%}
+    <h1>FIN CAN DO THE FOLLOWING</h1>
+  </div>
+  <div class="row">
+    <div class="card">
+      <div class="card-header">
+        <h1>Search By File</h1>
+      </div>
+      <div class="card-body">
+        <p>
+         Give fin a Image, he retirves a bunch of images which he finds similar...!
+        </p>
+        <a href="{{ url_for('uploadFile') }}" class="out-of-order">LINK OUT OF ORDER</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h1>Search By Links</h1>
+      </div>
+      <div class="card-body">
+        <p>
+          Dont have a file but have a link...? Give him the link too..! fin is trained to search that image too.!
+        </p>
+        <a href="{{ url_for('searchbylink') }}" class="btn">Use your link</a>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h1>By Keyword</h1>
+      </div>
+      <div class="card-body">
+        <p>
+          Type some keyword to fin and let him get you some bunch related to it..!
+        </p>
+        <a href="{{ url_for('searchbykeyword') }}" class="btn">Type a keyword</a>
+      </div>
+    </div>
+    <!-- <div class="card">
+      <div class="card-header">
+        <h1>JQuery</h1>
+      </div>
+      <div class="card-body">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi neque molestiae eius explicabo mollitia tempore reiciendis, vel, sequi.
+        </p>
+        "https://veohops.com/wp-content/uploads/2016/09/45.jpg
+        <a href="#" class="btn">Read more</a>
+      </div> -->
+    </div>
+  </div>
+  {%block login%}
+  <div class="heading">
+    <a href="{{ url_for('logout') }}" class="mainpage-indexbutton">LOG0UT</a>
+  </div>
+  {%endblock%}
+</div>
+
+ {%endblock%}
+ {%endblock%}
+ {%endblock%}
+</html>

@@ -1,0 +1,137 @@
+
+{%extends "index.html"%}
+{%block head%}
+<link href="http://allfont.net/allfont.css?fonts=agency-fb-bold" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&family=Montserrat:wght@900&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+{%block stylesheet%}<link rel="stylesheet" href= "{{ url_for('static',filename='stylesheets/search.css') }}">{%endblock%}
+{%block title%}<title>Search by link</title>{% endblock%}
+
+{%endblock%}
+{%block body%}
+ {%block navigation%}
+ {{super()}}
+ {%endblock%}
+
+
+
+{%block section%}
+{%block hd%}
+<div class="heading">
+    {%block user%}
+    {% if session["username"] %}
+    <h2>COMMON {{session["username"]}} Give a try with yout link..!</h2>
+    
+    {%else%}
+    <h2>COMMON FRIEND Give a try with your link..!</h2>
+    {%endif%}
+    {%endblock%}
+</div>
+{%endblock%}
+<div class="card-container">
+   
+    <div class="box">
+        <div class="inner">
+            <div class="card-container-title">
+                {%block ctitle%}
+                    <h1>SEARCH WITH LINK</h1>
+                {%endblock%}
+            </div>
+            {%block form%}
+            <form method="POST" class="form">
+                <label for="link"style="padding-top:13px;font-family: 'Merriweather Sans', sans-serif;
+                font-family: 'Montserrat', sans-serif; font-size:large">
+                Paste Your link here
+                </label>
+                {%block input%}
+                <input type="text" class="form-content" name="inpt"  placeholder="link here" required>
+                {%endblock%}
+                <div class="form-border"></div>
+                <p style="padding-top:13px;font-family: 'Merriweather Sans', sans-serif;
+                font-family: 'Montserrat', sans-serif; font-size:large">
+                Your Image here : 
+                </p>
+                <div id="loading"></div>
+                <div class="image-section" id="content">
+                    {% if link|length==0%}
+                    <img src="{{url_for('static',filename='sharkholder1.png')}}" style="object-fit: contain;height: 100%; width: 100%; object-fit: contain">
+                    {%else%}
+                    <img src="{{link}}" style="object-fit: contain;height: 100%; width: 100%; object-fit: contain" alt="your image here">
+                    {%endif%}
+                </div>
+                <div class="btn-section">
+            
+                    <input type="submit" class="submit-button" value="Give it to Fin"/>
+                </div>
+            </form>
+            {%endblock%}
+        
+            <script type="text/javascript">// <![CDATA[
+                function loading(){
+                    $("#loading").show();
+                    $("#content").hide();       
+                }
+        // ]]></script>
+        
+    <!-- <div class="heading">
+
+        <h2>THE REUSLTS ARE : </h2>
+    </div> -->
+    <!-- <script>
+        let link='';
+        var domain;
+    </script> -->
+    </div>
+    </div>
+    
+    {%for link in links%}
+    {% if loop.index == 1%}
+    <div class="heading" style="width: 100%;">
+
+        <h2>THE REUSLTS ARE : </h2>
+    </div>
+    {% endif%}
+    
+    <div class="result-div" style="width: 75%;height:33%">
+        
+        <div class="result-div-title">
+         <span id="domain-name" style="color: black;"></span>   
+        </div>
+        <!-- <script>
+            link = '{{link}}';
+            domain = (new URL(link));
+            domain = domain.hostname;
+            document.getElementById("domain-name").innerHTML=domain;
+           
+
+        </script> -->
+    
+         <div class="result-div-content">{{link["name"]}}</div>
+         <div class="image-section"><img src={{link["contentUrl"]}}  style="object-fit: contain;height: 100%; width: 100%; object-fit: contain"></div>
+        <div class="button-section">
+           
+            <button class="submit-button" style="margin-top: 10px;">Go</button>
+        </div>
+    </div>   
+
+
+    
+  
+    {%endfor%}   
+    
+</div>
+</div>
+  
+    
+
+    
+
+</div>
+
+
+{%endblock%}
+{%endblock%}

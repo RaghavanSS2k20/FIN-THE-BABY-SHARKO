@@ -1,0 +1,133 @@
+.box{
+    
+    background:  #fbfbfb;
+    border-radius: 8px;
+    box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+    height: 450px;
+    margin: 6rem auto 8.1rem auto;
+    width: 350px;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px; 
+    transition: 5s;
+}
+.wrong-box{
+  /* This will come into play later */
+  background:  #e95c5c;
+  border-radius: 8px;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
+  height: 450px;
+  margin: 6rem auto 8.1rem auto;
+  width: 350px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px; 
+  transition: 5s;
+}
+.box:hover{
+  background-color: rgb(159, 237, 237);
+  box-shadow: 0px 1px 8px #000000;
+
+}
+.wrong-box:hover{
+  background-color: rgb(159, 237, 237);
+  box-shadow: 0px 1px 8px #000000;
+}
+.logintitle{
+    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+  letter-spacing: 4px;
+  padding-bottom: 23px;
+  padding-top: 13px;
+  text-align: center;
+  font-weight: 700;
+}
+.underline{
+    background: -webkit-linear-gradient(right, #0a6abd, #2ec06f);
+  height: 5px;
+  border-radius: 20px;
+  margin: -1.1rem auto 0 auto;
+  width: 150px;
+}
+.inner {
+   
+    padding: 12px 44px;
+    
+    
+    /* box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px; */
+  }
+.container{
+    /* Full screen width and height */
+  width: 100%;
+  min-height: 100%;
+    
+  /* Centers the container in the middle of the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    
+  margin: 0;
+}
+
+.form{
+    align-items: left;
+  display: flex;
+  flex-direction: column;
+}
+.form-border{
+    background: -webkit-linear-gradient(right, #0a6abd, #2ec06f);
+  height: 1px;
+  width: 100%;
+}
+.forgot-password{
+  color: #2dbd6e;
+  font-family: "Raleway", sans-serif;
+  font-size: 10pt;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  text-align: right;
+  transition: 1s;
+}
+.forgot-password:hover{
+  color: white;
+  background:linear-gradient(90deg,white,red,crimson);
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
+  text-shadow: 2px 2px 8px #0f0e0e;
+}
+.form-content{
+    
+        background: #fbfbfb;
+        border: none;
+        outline: none;
+        padding-top: 14px;
+        
+      
+}
+
+.submit-button{
+    background: -webkit-linear-gradient(right, #0a6abd, #2ec06f);
+  border: none;
+  border-radius: 21px;
+  box-shadow: 0px 1px 8px #24c64f;
+  cursor: pointer;
+  color: white;
+  font-family: "Raleway SemiBold", sans-serif;
+  height: 42.3px;
+  margin: 0 auto;
+ 
+  transition: 0.25s;
+  width: 153px;
+}
+.submit-button:hover{
+  
+    box-shadow: 0px 1px 18px #24c64f;
+  }
+  .logintitle p{
+    color: antiquewhite;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: left;
+    margin: 0;
+    transition: 1s;
+  }
+  .logintitle p:hover{
+    color: white;
+  }
+}

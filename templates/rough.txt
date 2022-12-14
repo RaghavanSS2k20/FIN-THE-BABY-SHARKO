@@ -1,0 +1,83 @@
+<link rel="stylesheet" href= "{{ url_for('static',filename='stylesheets/search.css') }}">
+{% block title%}<title>Search by keyword</title>{%endblock%}
+{%block hd%}
+<div class="heading">
+    <h1>SEARCH BY KEYWORD</h1>
+</div>
+{% endblock%}
+
+{%block ctitle%}
+<h1 style="text-transform: uppercase;">search with Keyword</h1>
+{%endblock%}
+
+{%block form%}
+<form method="POST" class="form">
+    <label for="link"style="padding-top:13px;font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif; font-size:large">
+    Type a keyword to search
+    </label>
+    <input type="text" class="form-content" name="keyword"  placeholder="Type here" required>
+    <div class="form-border"></div>
+    
+    
+   
+    <div class="btn-section">
+
+        <input type="submit" class="submit-button" value="Give it to Fin"/>
+    </div>
+</form>
+{%endblock%}
+{%block results%}
+
+<div class="card-container">
+
+ {%for page in pages%}
+ <div class="results-div">
+    <div class="results-div-content">{{page}}</div>
+ </div>
+
+
+ {%endfor%}
+</div>
+ {%endblock%}
+
+
+
+
+
+
+
+
+  {%for link in links%}
+    {% if loop.index == 1%}
+    <div class="heading" style="width: 100%;">
+
+        <h2>THE REUSLTS ARE : </h2>
+    </div>
+    {% endif%}
+
+    <div class="result-div" style="width: 50%; overflow">
+        
+        <div class="result-div-title">
+         <span id="domain-name" style="color: black;"></span>   
+        </div>
+        <!-- <script>
+            link = '{{link}}';
+            domain = (new URL(link));
+            domain = domain.hostname;
+            document.getElementById("domain-name").innerHTML=domain;
+           
+
+        </script> -->
+    
+         <div class="result-div-content">{{link["contentUrl"]}}</div>
+        <div class="button-section">
+            
+            <button class="submit-button" ><a href="href={{"link['hostPageUrl']"}}">Go</a></button>
+        </div>
+    </div>   
+
+
+    
+  
+    {%endfor%} 

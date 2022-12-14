@@ -1,0 +1,128 @@
+*{
+  box-sizing:border-box;
+  margin: 0%;
+  padding:0;
+  
+}
+body{
+  background:linear-gradient(90deg,white,white,#1d4c6e);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-attachment: fixed;
+  
+}
+p{
+  color:red;
+  padding: 0%;
+  margin: 0%;
+  text-align: unset;
+  
+}
+.container {
+  width: 90%;
+  margin: 50px auto;
+}
+.heading {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 50px;
+  color: #f54e42;
+  font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+
+.card {
+  width: 20%;
+  background: paleturquoise;
+  border: 1px solid #ccc;
+  margin-bottom: 50px;
+  transition: 0.3s;
+  
+  border-radius: 6%;
+}
+
+.card-header {
+  text-align: center;
+  transition: 0.9s;
+  padding: 50px 10px;
+  background: linear-gradient(45deg,grey, #f50940, #e77f09,rgb(255, 0, 136),rgb(18, 100, 163),black,rgb(145, 137, 137));
+  
+  color: #fff;
+  border-top-left-radius:6% ;
+  border-top-right-radius: 6%;
+}
+
+.card-body {
+  padding: 30px 20px;
+  text-align: center;
+  font-size: 18px;
+  
+}
+.card-header:hover{
+  background: linear-gradient(45deg,grey, #f50940, #e77f09,rgb(255, 0, 136));
+  color: aqua;
+}
+
+.card-body .btn {
+  display: block;
+  color: #fff;
+  text-align: center;
+  background: linear-gradient(to right, #ff416c, #ff4b2b);
+  margin-top: 30px;
+  text-decoration: none;
+  padding: 10px 5px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 40px -10px rgba(252, 249, 249, 0.25);
+  background-color: rgba(252, 249, 249, 0.25);
+}
+
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  .container {
+    width: 100%;
+  }
+
+  .heading {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .card {
+    width: 80%;
+  }
+}
+.mainpage-indexbutton{
+  background-color: rgb(29, 219, 222);
+   border: none;
+  color: white;
+  /* padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 5%;
+  padding-bottom: 5%; */
+  padding-left: 3%;
+  padding-right: 3%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}

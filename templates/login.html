@@ -1,0 +1,83 @@
+{% extends "index.html"%}
+{%block head%}
+<link href="http://allfont.net/allfont.css?fonts=agency-fb-bold" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&family=Montserrat:wght@900&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href= "{{ url_for('static',filename='stylesheets/loginstyle.css') }}">
+<title>Login</title>
+{%endblock%}
+{%block body%}
+ {%block navigation%}
+ {{super()}}
+ {%endblock%}
+<!-- <head>
+<link rel="stylesheet" href= "{{ url_for('static',filename='stylesheets/loginstyle.css') }}">
+<title>Login</title>
+</head> -->
+{%block section%}
+
+<div class="container">
+  <div class="left-box" >
+    <div class="logintitle">
+    
+     <p>FRIEND OF FIN..?</p>
+     <p> HE MIGHT BE GLAD </p>
+     <p>TO MEET YOU</p>
+    
+    </div>
+  
+    
+</div>
+{%if message == "good"%}
+<div class="box" >
+{% elif message == 'AUTHFAILED' %}
+<div class="wrong-box">
+{%endif%}
+
+    <div class="inner">
+        <div class="logintitle">
+           <h1>Log In </h1> 
+            <div class="underline"></div>
+        </div>
+        
+   
+    <form  method="POST" class="form">
+        <label for="emailId" style="padding-top:13px;font-family: 'Merriweather Sans', sans-serif;
+        font-family: 'Montserrat', sans-serif; font-size:large">
+            &nbsp;Email
+          </label>
+      <input type="text" class="form-content" name="emailId" id="emailId" placeholder="email Id" required />
+      <div class="form-border"></div>
+      <br>
+      <label for="emailId" style="padding-top:13px;font-family: 'Merriweather Sans', sans-serif;
+      font-family: 'Montserrat', sans-serif; font-size:large">
+          &nbsp;Password
+      </label>
+      <input type="password" class="form-content" name="password" id="password" placeholder="Password" required/>
+      <div class="form-border"></div>
+      
+      <a href="#">
+        <legend class="forgot-password">Forgot password?</legend>
+        </a>
+      
+      <input type="submit" class="submit-button" value="Log In"/>
+      <a href="{{ url_for('signup') }}" class="button" style="text-align:center;">Sign up</a>
+
+    </form>
+</div>
+</div>
+
+</div>
+
+<!-- <div class="footer">
+<h4>Made by <a href="http://www.github.com/PolBaladas">Pol Baladas</a></h4>
+<h5 style="text-align:center;">Check <a href="https://github.com/PolBaladas/GCI-LoginApp">this Project</a> on Github</h5>
+</div> -->
+
+<!--  -->
+{%endblock%}
+{%endblock%}

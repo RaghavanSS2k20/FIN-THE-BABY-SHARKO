@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    {%block head%}
+    <head>
+        <link href="http://allfont.net/allfont.css?fonts=agency-fb-bold" rel="stylesheet" type="text/css" />
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+       
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@500&family=Montserrat:wght@900&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+        <!-- <script src="cursoranimation.js"></script> -->
+        <link rel="stylesheet" href= "{{ url_for('static',filename='stylesheets/indexstyle.css') }}">
+        <link rel="stylesheet" href= "{{ url_for('static',filename='stylesheets/babysharko.css') }}">
+        <link rel="stylesheet" href= "{{ url_for('static',filename='stylesheets/bubblebackground.css') }}">
+        
+        <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+        <!--BOOTSTRAP LINMING PHASE-->
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+        <title>Welcome..!</title>
+    
+    </head>
+    {%endblock%}
+    {%block bootstrap%}
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <!--BOOTSTRAP LINMING PHASE-->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    {%endblock%}
+    <link rel="stylesheet" href= "{{ url_for('static',filename='stylesheets/indexstyle.css') }}">
+   {%block body%}
+    <body>
+        <main>
+            {%block navigation%} 
+            <header>
+             
+            <div class="name">FIN SEARCHES FOR YOU</div>
+            
+            <script>
+                function changeclass() {
+            
+                    var NAME = document.getElementById("home")
+                    
+                    NAME.className="active"
+                    
+                    } 
+            </script>
+             <nav id="navigation">
+            
+                <ul>
+                    <li><a href="{{url_for('index')}}" id="home" >Home</a></li>
+                    <li><a href="#news" id="about">Who is fin?</a></li>
+                    <li><a href="#contact" id="contact">Reach fin</a></li>
+                    <li ><a href="{{ url_for('login') }}" id="login" >Be a friend</a></li>
+                   
+                  </ul>
+               
+           
+            </nav>
+            <!-- <script>
+                function changeactive(){
+                    var name=document.gete
+                }
+            </script> -->
+            
+            </header>
+            {%endblock%}    
+            {%block section%}
+            <section >
+                <div class="container" style="margin: 0;padding: 0%;">
+                    <div class="row" style="padding-top: 10%;padding-left: 10%;padding-right: 1%;">
+                      <div class="col-sm-7" >
+                        <div class="row" style="color:whitesmoke; "id="h">MEET FIN THE BABY SHARKO!!</div>
+                        <div class="row"style="padding-left:10%"><a href="{{ url_for('anonymous') }}" class="indexbutton"> WHAT FIN CAN DO     ❯❯</a></div>
+                      </div>
+                      <div class="col" style="padding-left: 70%; padding-top:10%;">
+                        <section>
+	
+                            
+                        <div id="shark">
+                            <div class="shark-body"></div>
+                            <div class="shark-eye"></div>
+                            <div class="aleta"></div>
+                            <div class="tail"></div>
+                            <div class="fin"></div>
+                            <div class="gill gill-1"></div>
+                            <div class="gill gill-2"></div>
+                            <div class="gill gill-3"></div>                         
+                        </div>
+                                </section>
+                                    
+                                </div>
+            </section>
+           {%endblock%}
+        </main>
+        <script src="{{url_for('static', filename='animcur.js')}}"></script>
+        <!-- <script src="cursortail.js"></script> -->
+        <script src="{{url_for('static', filename='bubblebackground.js')}}"></script>
+        <script src="{{url_for('static', filename='index.js')}}"></script>
+        
+
+    </body>
+    {%endblock%}
+    
+</html>

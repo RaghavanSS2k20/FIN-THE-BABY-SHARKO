@@ -1,0 +1,66 @@
+{%extends "searchbylink.html"%}
+
+{%block head%}
+{{super()}}
+{%endblock%}
+
+{%block stylesheet%}
+{{super()}}
+<link rel="stylesheet" href="{{ url_for('static',filename='stylesheets/searchbykeyword.css')}}">
+{%endblock%}
+
+{%block title%}<title>Saerch by keyword</title>{%endblock%}
+
+{%block section%}
+<div class="heading">
+    <h2>SEARCH WITH YOUR KEYWORD</h2>
+</div>
+<div class="card-container">
+    <div class="box">
+        <div class="inner">
+            <div class="card-container-title">
+                <h1>SEARCH WITH KEYWORD</h1>
+            </div>
+            {%block form%}
+            <form method="POST" class="form">
+                <label for="link"style="padding-top:13px;font-family: 'Merriweather Sans', sans-serif;
+                font-family: 'Montserrat', sans-serif; font-size:large">
+                Type your keyword here 
+                </label>
+                {%block input%}
+                <input type="text" class="form-content" name="keyword"  placeholder="link here" required>
+                {%endblock%}
+                <div class="form-border"></div>
+               
+                <div id="loading"></div>
+                
+                <div class="btn-section">
+            
+                    <input type="submit" class="submit-button" value="Give it to Fin"/>
+                </div>
+            </form>
+            {%endblock%}
+        </div>
+        
+    </div>
+    <div class="row-card">
+        
+        {%for link in value%}
+        <div class="result-card">
+            <div class="result-card-header">
+                <img src="{{link["contentUrl"]}}" style="object-fit: contain;height: 100%; width: 100%; object-fit: contain" >
+            </div>
+            <div class="result-card-content">
+                <p style="color:rgb(0, 0, 0)">{{link["name"]}}</p>
+            </div>
+            <div class="go-button-section">
+                <button class="go-button" href="">G0..!</button>
+            </div>
+        </div>
+        {%endfor%}
+    </div>
+
+
+    
+</div>
+{%endblock%}
