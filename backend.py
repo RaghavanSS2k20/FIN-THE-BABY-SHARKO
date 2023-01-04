@@ -51,7 +51,7 @@ c = conn.cursor()
 lmsg = "good"
 #c.execute("drop table if exists users")
 #createTable = "create table users (emailId text PRIMARY key,password text not null,noOfsearches integer DEFAULT 0)"
-#alert = "podasummi"
+#alert = "fool"
 # def insertUser(emailid,password):
 #     con = sql.connect("database.db")
 #     cur = con.cursor()
