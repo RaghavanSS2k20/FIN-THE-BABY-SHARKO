@@ -11,5 +11,16 @@ FIN is a young shark that has been programmed to find the photos that best fit y
 ## Concepts behind
 #### **->**  Flask
 #### **->** Sqlite3
-#### **->** A couple Thirdparty APIs 
+#### **->** A couple of Thirdparty APIs 
+
+## How to use?
+A common end user with no prior computer experience can utilise FIN to its complete capability. 
+Try typing your image query in the form of a file, link, or phrase. 
+
+## Ideas to improve
+#### **->**  synchronise a NoSQL database 
+#### **->**  Implementing own search stategies
+#### **->**  Having Gunicorn Server for better Scalability
+#### **->**  Improving test cases, round corners and modularity
+#### **->**  Having Javascript libraries as frontend
 
