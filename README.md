@@ -26,7 +26,7 @@ Try typing your image query in the form of a file, link, or phrase.
 
 ## Go throughs
 #### Landinge page 
-![Screenshot](screenshot.png)
+![Screenshot](landingpage.png)
 A lot of easter eggs to go through
 like burst the bubbles
 rotate fin
