@@ -26,7 +26,8 @@ Try typing your image query in the form of a file, link, or phrase.
 
 ## Go throughs
 #### Landinge page 
-![Screenshot](landing page.PNG)
+![landing page](https://user-images.githubusercontent.com/76263002/216893680-c0f78556-45cc-4059-9b4d-7edd326b3721.PNG)
+
 A lot of easter eggs to go through
 like burst the bubbles
 rotate fin
